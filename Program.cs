@@ -17,17 +17,20 @@
                 {
                     int pot = player.GiveCash(bet);
                     pot *= 2;
-                    int chance = random.Next(1);
+
+                    double chance = random.NextDouble();
                     if (chance>odds)
                     {
                         player.ReceiveCash(pot);
+                        Console.WriteLine("You win "+ pot + " bucks");
                     }
                     else
                     {
-                        Console.WriteLine("Bad luck, you lose");
+                        Console.WriteLine("Bad luck, you lose!");
                     }
                 }
             }
+                        Console.WriteLine("The house always wins.");
 
         }
     }
